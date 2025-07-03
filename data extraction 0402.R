@@ -1,9 +1,9 @@
 install.packages("XML")
 library(XML)
-install.packages("xml2")  # 安装xml2包（如果尚未安装）
+install.packages("xml2") 
 library(xml2) 
 
-file_path <- "D:/Cornell University/Capstone/DATA/WCM_2025_Capstone_AdjustedD20250328235201+0000.xml"
+file_path <- "xxx.xml"
 xml_data <- read_xml(file_path)
 
 #Use XPath to extract specific data
@@ -80,4 +80,4 @@ extracted_data <- do.call(rbind, lapply(extracted_data_list , function(x) data.f
 head(extracted_data)
 
 # Write the data to a CSV file
-write.csv(extracted_data, "D:/Cornell University/Capstone/DATA/extracted_data_0402.csv", row.names = FALSE)
+write.csv(extracted_data, "xxx.csv", row.names = FALSE)
