@@ -3,7 +3,7 @@ library(XML)
 install.packages("xml2") 
 library(xml2) 
 
-file_path <- "xxx.xml"
+file_path <- "xxx/WCM_2025_Capstone_AdjustedD20250328235201+0000.xml"
 xml_data <- read_xml(file_path)
 
 #Use XPath to extract specific data
@@ -80,4 +80,4 @@ extracted_data <- do.call(rbind, lapply(extracted_data_list , function(x) data.f
 head(extracted_data)
 
 # Write the data to a CSV file
-write.csv(extracted_data, "xxx.csv", row.names = FALSE)
+write.csv(extracted_data, "xxx/extracted_data_0402.csv", row.names = FALSE)
